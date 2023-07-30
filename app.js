@@ -8,7 +8,7 @@ const scroll = new LocomotiveScroll({
 const firstPageAnimation = () => {
     let tl = gsap.timeline()
 
-    tl.from("#nav", {
+    tl.from('#nav,#hero_footer', {
         y: 20,
         opacity: 0,
         duration: 0.6,
@@ -18,11 +18,10 @@ const firstPageAnimation = () => {
         ease: Expo.easeInOut,
         duration: 0.8,
         stagger: 0.2
-    }).from('#hero_footer', {
-        y: -10,
-        opacity: 0,
+    }).to('#hero_footer', {
+        y: 0,
+        opacity: 1,
         duration: 0.6,
-        delay: -1,
         ease: Expo.easeInOut
 
     })
